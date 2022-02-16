@@ -13,23 +13,29 @@ export default function Customize({ generateApiUrl, buttonStyle }) {
         border: "1px solid rgb(51, 51, 51)"
       }
     
-    /* Fetch categories from API. Categories may change due to open source. Add a random option to data, then set category and difficulty state values as array of objects, each object containing the primary value and an isSelected boolean which will be used to determine which option is selected*/
+    /* Fetch categories from API (categories may change due to open source). Add a random option to data, then set category and difficulty state values as array of objects, each object containing the primary value and an isSelected boolean which will be used to determine which option is selected*/
     React.useEffect(() => {
         setLoading(true) /* Implement loading screen while waiting for fetch. */
         fetch("https://opentdb.com/api_category.php")
         .then(res => res.json())
         .then(data => {
-            data.trivia_categories.unshift({ id:0, name: "Random"})
-            /* Remove extranneious category naming */
+            data.trivia_categories.unshift({ id:0, name: "Random", isSelected: true, key: nanoid()})
+            /* Remove extraneous category naming */
             data.trivia_categories = data.trivia_categories.map(category => {
                 let newName = category.name.split('Entertainment: ').join('').split('Science: ').join('')
                 return {...category, name: newName}
             })
-            setCategoryOptions(data.trivia_categories.map(category => ({
-                ...category,
-                isSelected: false,
-                key: nanoid()
-            })))
+            setCategoryOptions(data.trivia_categories.map(category => {
+                if(category.id !== 0){
+                    return {
+                        ...category,
+                        isSelected: false,
+                        key: nanoid()
+                        }
+                } else { /* Establish random category as isSelected by default */
+                    return category
+                }
+            }))
             setDifficultyOptions(difficulties.map(item => ({
                 difficulty: item,
                 isSelected: false,

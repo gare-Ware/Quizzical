@@ -183,6 +183,7 @@ button:active {
   align-items: center;
   margin-top: 2em;
   height: 3em;
+  position: relative;
 }
 .score {
   margin-right: 2em;
@@ -196,14 +197,14 @@ button:active {
   margin-right: 2em;
   padding: .8em 3em;
   position: absolute;
-  right: 45%;
+  right: 34%;
   animation: playAgainSlide 600ms forwards;
 }
 @keyframes scoreDisplay {
   to {opacity: 1;}
 }
 @keyframes playAgainSlide {
-  to {right: 33%;}
+  to {right: 0%;}
 }
 @keyframes wiggle {
   20% {transform: translateX(-3px);}

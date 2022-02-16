@@ -27,7 +27,7 @@ function App() {
 
   /* Pass function to Customize component to generate url for fetch */
   function generateApiUrl(data){
-    if(data.category && data.difficulty){
+    if(data.difficulty){
       let url = `https://opentdb.com/api.php?amount=5&category=${data.category}&difficulty=${data.difficulty}&encode=base64`
       setApiUrl(url)
       setButtonStyle({})
@@ -159,6 +159,7 @@ function App() {
     setSelectedAnswers([])
     setNumCorrect(0)
     setQuizEnded(false)
+    setApiUrl({})
     setCustomizingQuiz(true)
   }
 
@@ -188,8 +189,8 @@ function App() {
       }
       if(quizEnded && !option.isCorrect &&!option.isIncorrect){
         styles = {
-          color: "#545e94",
-          border: "1px solid #545e94"
+          color: "#8f96bd",
+          border: "1px solid #8f96bd"
         }
       }
       return (<li 
