@@ -21,3 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/setupTests.js
+src/reportWebVitals.js
+src/logo.svg
+README.md
+public/robots.txt
+public/logo512.png
+public/logo192.png
+public/favicon.ico
+src/App.test.js
+src/App.css
