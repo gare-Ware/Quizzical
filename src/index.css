@@ -13,8 +13,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #484f77;
-  /* color: #242424; */
-  /* color: #1f1f1f; */
   color: rgba(0, 0, 0, 0.774);
   height: 100vh;
   display: flex;
