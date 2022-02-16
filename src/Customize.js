@@ -42,7 +42,7 @@ export default function Customize({ generateApiUrl, buttonStyle }) {
         .finally(() => {
             setLoading(false)
         })
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     /* Function set as onclick function for every category. Sets apiUrlData and maps through categoryOptions to make sure selection is highlighted. */
     function selectCategory(id) {
