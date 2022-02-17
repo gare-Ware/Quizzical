@@ -100,16 +100,16 @@ export default function Customize({ generateApiUrl, buttonStyle }) {
     }
 
     return (
-        <div className="quiz-container customize-container">
+        <div className="customize-container">
             <h3 className="customize-header">Select a category</h3>
             <ul className='customize-options'>
               {categoryElements}
             </ul>
-            <h3 className="customize-header">Select difficulty</h3>
-            <ul className='customize-options'>
+            <h3 className="customize-header customize-header__difficulty">Select difficulty</h3>
+            <ul className='customize-options customize-options__difficulties'>
               {difficultyElements}
             </ul>
-            <button className="start-btn" onClick={() => generateApiUrl(apiUrlData)} style={buttonStyle}>Start quiz</button>
+            <button className="start-quiz-btn" onClick={() => generateApiUrl(apiUrlData)} style={buttonStyle}>Start quiz</button>
         </div>
     )
 }

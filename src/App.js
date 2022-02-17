@@ -222,7 +222,7 @@ function App() {
       <Intro startQuiz={startQuiz} /> :
       customizingQuiz && <Customize generateApiUrl={generateApiUrl} buttonStyle={buttonStyle}/>}
       {!initialStart && !customizingQuiz &&
-      <div className='quiz-container quiz-started'>
+      <div className='quiz-container'>
         {questionElements}
         {!quizEnded ? 
         <button className='check-answers-btn' onClick={checkAnswers} style={buttonStyle}>Check answers</button> :
