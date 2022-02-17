@@ -2,7 +2,7 @@ import React from 'react';
 import Intro from './Intro'
 import Customize from './Customize';
 import { nanoid } from 'nanoid'
-import {decode} from 'html-entities'
+// import {decode} from 'html-entities'
 
 function App() {
   const [quizQuestions, setQuizQuestions] = React.useState([])
