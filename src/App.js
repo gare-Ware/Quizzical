@@ -2,6 +2,7 @@ import React from 'react';
 import Intro from './Intro'
 import Customize from './Customize';
 import { nanoid } from 'nanoid'
+import {decode} from 'html-entities'
 
 function App() {
   const [quizQuestions, setQuizQuestions] = React.useState([])
@@ -23,6 +24,7 @@ function App() {
   /* Decode base64 response to utf-8. (Some specific characters are currently not getting decoded) */
   function formatData(data) {
     return decodeURIComponent(encodeURIComponent(window.atob(data)))
+    // return decode(data)
   }
 
   /* Pass function to Customize component to generate url for fetch */

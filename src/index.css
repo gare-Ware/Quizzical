@@ -19,7 +19,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #484f77;
   color: #000000c5;
-  /* color: #293264; */
   min-height: 100vh;
 }
 
@@ -63,7 +62,7 @@ button:hover {
 }
 
 button:active {
-  transform: translateY(4px)
+  transform: translateY(4px);
 }
 
 /* ---App window--- */
@@ -257,10 +256,20 @@ button:active {
   100% { transform: rotate(360deg);}
 }
 
+/* ---Smaller screen devices--- */
+
 @media (max-width: 820px){
   body {
     display: block;
     background-color: #b8bedd;
+  }
+  button:hover {
+    transform: none;
+    background-color: #4D5B9E;
+    color: #F5F7FB;
+  }
+  button:active {
+    transform: none;
   }
   .app {
     min-height: 100vh;
@@ -292,6 +301,9 @@ button:active {
   }
   .customize-options__difficulties {
     padding-left: 0em;
+  }
+  .start-quiz-btn {
+    margin: 1em 0;
   }
   .quiz-container {
     justify-content: center;
@@ -329,7 +341,7 @@ button:active {
     animation: playAgainSlide 600ms forwards;
   }
   @keyframes playAgainSlide {
-    to {top: 35%;}
+    to {top: 47%;}
   }
 }
 
