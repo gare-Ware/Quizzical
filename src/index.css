@@ -317,15 +317,18 @@ button:active {
   .quiz-question__options {
     font-size: 1rem;
   }
+  .check-answers-btn {
+    width: 180px;
+    align-self: center;
+    margin: 3em 0 2em 0;
+    font-size: .9rem;
+  }
   .quiz-ended-container {
-    display: flex;
     justify-content: flex-start;
-    align-items: center;
     flex-direction: column;
-    margin-top: 2em;
-    height: 150px;
+    margin-top: 1em;
+    height: 120px;
     width: 300px;
-    position: relative;
     align-self: center;
   }
   .score {
@@ -337,7 +340,7 @@ button:active {
     width: 180px;
     position: absolute;
     right: 20%;
-    top: 0%;
+    top: 23%;
     animation: playAgainSlide 600ms forwards;
   }
   @keyframes playAgainSlide {
