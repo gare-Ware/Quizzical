@@ -353,14 +353,14 @@ button:active {
     background-position: 106% 0%, bottom left;
   }
   .quiz-question__question {
-    font-size: 1rem;
+    /* font-size: 1rem; */
   }
   .quiz-question__options {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
     justify-content: center;
     margin-bottom: 0em;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     column-gap: 1em;
   }
   .option {
@@ -397,7 +397,6 @@ button:active {
     grid-template: 1fr 1fr / 1fr 1fr;
     justify-content: center;
     margin-bottom: 0em;
-    font-size: 0.8rem;
     column-gap: 1em;
   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import Intro from './Intro'
 import Customize from './Customize';
 import { nanoid } from 'nanoid'
-// import {decode} from 'html-entities'
+import {decode} from 'html-entities'
 
 function App() {
   const [quizQuestions, setQuizQuestions] = React.useState([])
@@ -21,16 +21,15 @@ function App() {
     setCustomizingQuiz(true)
   }
 
-  /* Decode base64 response to utf-8. (Some specific characters are currently not getting decoded) */
+  /* Decode html entities to characters. */
   function formatData(data) {
-    return decodeURIComponent(encodeURIComponent(window.atob(data)))
-    // return decode(data)
+    return decode(data)
   }
 
   /* Pass function to Customize component to generate url for fetch */
   function generateApiUrl(data){
     if(data.difficulty){
-      let url = `https://opentdb.com/api.php?amount=5&category=${data.category}&difficulty=${data.difficulty}&encode=base64`
+      let url = `https://opentdb.com/api.php?amount=5&category=${data.category}&difficulty=${data.difficulty}`
       setApiUrl(url)
       setButtonStyle({})
       setCustomizingQuiz(false)
