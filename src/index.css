@@ -18,7 +18,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #484f77;
-  color: rgba(0, 0, 0, 0.774);
+  color: #000000c5;
+  /* color: #293264; */
   min-height: 100vh;
 }
 
@@ -178,7 +179,7 @@ button:active {
 }
 .option {
   font-weight: 500;
-  border: 1px solid #293264;
+  border: 1px solid #000000c5;
   padding: .3em 1.1em;
   min-width: 65px;
   border-radius: 15px;
@@ -253,25 +254,13 @@ button:active {
 }
 @keyframes spinner {
   0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg);}
 }
 
 @media (max-width: 820px){
   body {
     display: block;
-  }
-  .app {
-    min-height: 675px;
-    min-width: 800px;
-    max-width: 60vw;
-    font-family: 'Inter', sans-serif;
     background-color: #b8bedd;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
   }
   .app {
     min-height: 100vh;
@@ -287,6 +276,11 @@ button:active {
   .intro {
     height: 100vh;
     border-radius: 0px;
+  }
+  .option:hover {
+    background-color: #b8bedd;
+    color: #000000c5;
+    border: 1px solid #000000c5;
   }
   .customize-container {
     border-radius: 0px;
@@ -317,7 +311,7 @@ button:active {
     align-items: center;
     flex-direction: column;
     margin-top: 2em;
-    height: 100px;
+    height: 150px;
     width: 300px;
     position: relative;
     align-self: center;
@@ -335,7 +329,7 @@ button:active {
     animation: playAgainSlide 600ms forwards;
   }
   @keyframes playAgainSlide {
-    to {top: 50%;}
+    to {top: 35%;}
   }
 }
 
