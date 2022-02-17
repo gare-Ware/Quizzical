@@ -403,4 +403,13 @@ button:active {
   .customize-options {
     font-size: .8rem;
   }
+  .score {
+    font-weight: 700;
+    letter-spacing: .06em;
+    opacity: 0;
+    animation: scoreDisplay 1200ms forwards;
+  }
+  .score {
+    letter-spacing: 0;
+  }
 }
