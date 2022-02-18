@@ -46,7 +46,6 @@ function App() {
     fetch(apiUrl)
       .then(res => res.json())
       .then(data => {
-        /* Secode base64 response to utf-8 */
         const formattedData = data.results.map(item => {
           const formattedCorrectAnswer = formatData(item.correct_answer)
           const incorrect = item.incorrect_answers.map(answer => formatData(answer))
