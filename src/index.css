@@ -352,9 +352,6 @@ button:active {
   .quiz-container {
     background-position: 106% 0%, bottom left;
   }
-  .quiz-question__question {
-    /* font-size: 1rem; */
-  }
   .quiz-question__options {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
@@ -404,12 +401,6 @@ button:active {
 @media (max-width: 375px){
   .customize-options {
     font-size: .8rem;
-  }
-  .score {
-    font-weight: 700;
-    letter-spacing: .06em;
-    opacity: 0;
-    animation: scoreDisplay 1200ms forwards;
   }
   .score {
     letter-spacing: 0;
