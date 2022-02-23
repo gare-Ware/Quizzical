@@ -1,19 +1,19 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import Intro from './Intro'
 import Customize from './Customize';
 import { nanoid } from 'nanoid'
 import { decode } from 'html-entities'
 
 function App() {
-  const [quizQuestions, setQuizQuestions] = React.useState([])
-  const [selectedAnswers, setSelectedAnswers] = React.useState([])
-  const [initialStart, setInitialStart] = React.useState(true)
-  const [customizingQuiz, setCustomizingQuiz] = React.useState(false)
-  const [quizEnded, setQuizEnded] = React.useState(false)
-  const [numCorrect, setNumCorrect] = React.useState(0)
-  const [apiUrl, setApiUrl] = React.useState("")
-  const [loading, setLoading] = React.useState(false)
-  const [buttonStyle, setButtonStyle] = React.useState({})
+  const [quizQuestions, setQuizQuestions] = useState([])
+  const [selectedAnswers, setSelectedAnswers] = useState([])
+  const [initialStart, setInitialStart] = useState(true)
+  const [customizingQuiz, setCustomizingQuiz] = useState(false)
+  const [quizEnded, setQuizEnded] = useState(false)
+  const [numCorrect, setNumCorrect] = useState(0)
+  const [apiUrl, setApiUrl] = useState("")
+  const [loading, setLoading] = useState(false)
+  const [buttonStyle, setButtonStyle] = useState({})
 
   /* Function passed to Intro component, set to onClick on start button press. Only utilized on first load. */
   function startQuiz() {
@@ -41,7 +41,7 @@ function App() {
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     setLoading(true) /* Implement loading screen until data is fetched */
     fetch(apiUrl)
       .then(res => res.json())
