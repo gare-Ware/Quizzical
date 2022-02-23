@@ -2,7 +2,7 @@ import React from 'react';
 import Intro from './Intro'
 import Customize from './Customize';
 import { nanoid } from 'nanoid'
-import {decode} from 'html-entities'
+import { decode } from 'html-entities'
 
 function App() {
   const [quizQuestions, setQuizQuestions] = React.useState([])
@@ -78,12 +78,8 @@ function App() {
         })
         setQuizQuestions(formattedData)
       })
-      .catch(err => {
-        console.log(err)
-      })
-      .finally(() => {
-        setLoading(false)
-      })
+      .catch(err => console.log(err))
+      .finally(() => setLoading(false))
   }, [apiUrl]) /* Fetch is run and new questions are generated whenever apiUrl is changed 
                   via customize screen */
 
