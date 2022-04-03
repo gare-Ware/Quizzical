@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -17,7 +17,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #484f77;
+  background-color: #6877ce;
   color: #000000c5;
   min-height: 100vh;
 }
@@ -44,7 +44,7 @@ button {
   font-family: inherit;
   font-size: inherit;
   font-weight: 500;
-  background-color: #4D5B9E;
+  background-color: #596ac2;
   color: #F5F7FB;
   padding: 1em 0;
   border-radius: 15px;
@@ -57,7 +57,7 @@ button {
 
 button:hover {
   transform: scale(1.1);
-  background-color: #596ac2;
+  background-color: #6877ce;
   color: white;
 }
 
@@ -72,7 +72,6 @@ button:active {
   min-width: 800px;
   max-width: 60vw;
   font-family: 'Inter', sans-serif;
-  /* background-color: #b8bedd; */
   background-color: #eff0f5;
   border-radius: 15px;
   display: flex;
@@ -80,6 +79,7 @@ button:active {
   justify-content: center;
   align-items: center;
   margin: 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 /* ---Intro screen--- */
@@ -99,7 +99,12 @@ button:active {
 }
 .intro__title {
   margin-bottom: 0;
-  font-size: 3.5rem;
+  font-size: 5rem;
+  letter-spacing: -.05em;
+}
+.intro__subhead {
+  letter-spacing: -.01em;
+  font-weight: 500;
 }
 .intro__start-btn {
   width: 190px;
@@ -124,6 +129,7 @@ button:active {
 }
 .customize-header {
   font-size: 1.5rem;
+  letter-spacing: -.05em;
 }
 .customize-header__difficulty {
   margin: 0 0 .6em 0;
@@ -168,6 +174,7 @@ button:active {
 }
 .quiz-question__question {
   font-size: 1rem;
+  letter-spacing: -.05em;
 }
 .quiz-question__options {
   display: flex;
@@ -262,12 +269,10 @@ button:active {
 @media (max-width: 820px){
   body {
     display: block;
-    background-color: #b8bedd;
+    background-color: #eff0f5;
   }
   button:hover {
     transform: none;
-    background-color: #4D5B9E;
-    color: #F5F7FB;
   }
   button:active {
     transform: none;

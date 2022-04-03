@@ -165,22 +165,22 @@ function App() {
       let styles
       if(option.isSelected){
         styles = {
-          backgroundColor: "rgb(51, 51, 51)",
+          backgroundColor: "#333333",
           color: "#F5F7FB",
-          border: "1px solid rgb(51, 51, 51)"
+          border: "1px solid #333333"
         }
       }
       if(option.isCorrect){
         styles = {
-          backgroundColor: "#94D7A2",
-          border: "1px solid #94D7A2"
+          backgroundColor: "#7ee695",
+          border: "1px solid #7ee695"
         }
       }
       if(option.isIncorrect){
         styles = {
-          backgroundColor: "#cf9d9d",
+          backgroundColor: "#fa8e8e",
           color: "#545e94",
-          border: "1px solid #cf9d9d"
+          border: "1px solid #fa8e8e"
         }
       }
       if(quizEnded && !option.isCorrect &&!option.isIncorrect){

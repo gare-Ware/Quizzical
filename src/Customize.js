@@ -8,9 +8,9 @@ export default function Customize({ generateApiUrl, buttonStyle }) {
     const [loading, setLoading] = useState(false)
     const difficulties = ["easy", "medium", "hard"]
     const selectedOption = {
-        backgroundColor: "rgb(51, 51, 51)",
+        backgroundColor: "#333333",
         color: "#F5F7FB",
-        border: "1px solid rgb(51, 51, 51)"
+        border: "1px solid #333333"
       }
     
     /* Fetch categories from API (categories may change due to open source). Add a random option to data, then set category and difficulty state values as array of objects, each object containing the primary value and an isSelected boolean which will be used to determine which option is selected*/
