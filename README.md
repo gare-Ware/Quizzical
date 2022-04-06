@@ -3,7 +3,7 @@ A customizable quiz app built with React and [The Open Trivia Database API](http
 
 **Link to project:** https://gk-quizzical.netlify.app/
 
-<img width="670" alt="quizzical" src="https://user-images.githubusercontent.com/92345400/162046267-107781df-99ce-47c1-b7bc-89037e27de71.png">
+<img width="100%" alt="quizzical" src="https://user-images.githubusercontent.com/92345400/162046267-107781df-99ce-47c1-b7bc-89037e27de71.png">
 
 ## How It's Made:
 
