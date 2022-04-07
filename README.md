@@ -11,7 +11,7 @@ A customizable quiz app built with React and [The Open Trivia Database API](http
 
 The Open Trivia Database API provides encoded quiz data. Immediately after data is fetched, it is formatted with an imported package [html-entities](https://github.com/mdevils/html-entities.git). The data is then sorted into an array of quiz question objects. Each object includes an id, the question, the correct answer, and an array answerOptions, which is an array of answer option objects, each object including the answer, an id, and boolean variables that will be used to display which options are selected, which are correct, and which are incorrect. Imported package [nanoid](https://github.com/ai/nanoid.git) provides a unique key/id for all items.
 
-Maintaining user-selections in state allow for flexibility for the user, ensuring they can change their selections or select options in any order they please. If the user has not made all required selections, a simple animation lets them know.
+Maintaining user-selections in state allows for flexibility for the user, ensuring they can change their selections or select options in any order they please. If the user has not made all required selections, a simple animation lets them know.
 
 The Customize component allows the user to make selections which manipulate the API url, allowing them to customize the quiz. 
 
